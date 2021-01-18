@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
-        String url = "https://api.pokemontcg.io/v1/cards?name=charizard";
+        String url = "https://api.pokemontcg.io/v1/cards";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         Log.d("cek json: ", response.toString());
 
-                        String id, nama, image;
+                        String id, nama, image,text;
 
                         try {
                             JSONArray jsonArray = response.getJSONArray("cards");
                             if (jsonArray.length() != 0) {
-                                for (int i = 0; i < jsonArray.length(); i++) {
+                                for (int i = 0; i < 20; i++) {
                                     JSONObject data = jsonArray.getJSONObject(i);
 
                                     nama = data.getString("name").toString().trim();

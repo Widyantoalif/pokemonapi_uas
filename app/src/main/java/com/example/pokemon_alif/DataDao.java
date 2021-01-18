@@ -13,6 +13,9 @@ public abstract class DataDao {
     @Query("SELECT * FROM Pokemon")
     public abstract List<Pokemon> getAll();
 
+    @Query("DELETE FROM Pokemon")
+    public abstract void deleteAll();
+
     @Insert
     public abstract void insertAll(Pokemon pokemon);
 

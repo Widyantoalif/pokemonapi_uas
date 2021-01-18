@@ -11,7 +11,7 @@ public class Pokemon {
     private int id;
     @ColumnInfo(name = "nama")
     private String nama;
-    @ColumnInfo(name = "img")
+    @ColumnInfo(name = "image")
     private String image;
     @Ignore
     public Pokemon(String nama, String image){
@@ -23,6 +23,7 @@ public class Pokemon {
         this.id = id;
         this.nama = nama;
         this.image = image;
+
     }
     public int getId(){
         return id;

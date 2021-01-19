@@ -57,7 +57,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.CardViewHolder
                     }
                 });
 
-                alertDialog.setNeutralButton("HAPUS", new DialogInterface.OnClickListener() {
+                alertDialog.setNegativeButton("HAPUS", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         MainActivity.db.dataDao().delete(pokemons.get(pos));
